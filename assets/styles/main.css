@@ -1,4 +1,55 @@
 .home-welcome {
-    background: linear-gradient(0deg, rgba(36, 36, 36, 0.4), rgba(36, 36, 36, 0.4)), linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #42332A 0%, rgba(255, 255, 255, 0) 100%), url(architect-3979490.jpg);
     background-blend-mode: normal, normal, hue, normal;
+    height: 100vh;
+    object-fit: cover;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(36, 36, 36, 0.4), rgba(36, 36, 36, 0.4)), linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #42332A 0%, rgba(255, 255, 255, 0) 100%), url("../media/pageheader-1920w.jpg") no-repeat fixed center;
+    background-size: cover;
+    flex-direction: column;
+}
+
+.home-welcome-text {
+    position: fixed;
+    bottom: 200px;
+    color: white;
+}
+
+.home-welcome-text__heading--1 {
+    font-weight: 800;
+}
+
+.home-welcome-text__heading--2 {
+    font-weight: 300;
+}
+
+.home-welcome > * {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+}
+
+.home-welcome__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 40px 16px 50px;
+    gap: 20px;
+    bottom: 50px;
+    position: fixed;
+    background: #EB6C27;
+    color: white;
+}
+
+.home-welcome__button::after {
+    content: '\203A';
+    font-size: 2em;
+    display: inline-block;
+    transform: rotate(90deg);
 }
