@@ -1,3 +1,32 @@
+:root {
+    --primary: #EB6C27;
+    --text: #3a3a3a;
+    --text-grey: #888888;
+}
+
+/* basics */
+
+.container {
+    z-index: 2;
+    height: 1000px;
+    position: relative;
+}
+
+/* navbar */
+
+
+/* footer */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary);
+    height: 1000px;
+    z-index: 2;
+    position: relative;
+}
+
+/* Home */
 .home-welcome {
     background-blend-mode: normal, normal, hue, normal;
     height: 100vh;
@@ -13,25 +42,35 @@
 }
 
 .home-welcome-text {
-    position: fixed;
     bottom: 200px;
     color: white;
+    letter-spacing: -0.05em;
+}
+
+.home-welcome-text__heading {
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
 .home-welcome-text__heading--1 {
     font-weight: 800;
+    font-size: min(15vw, 10em);
 }
 
 .home-welcome-text__heading--2 {
     font-weight: 300;
+    font-size: min(6vw, 4em);
 }
 
 .home-welcome > * {
     background-attachment: fixed;
+    position: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     justify-content: center;
+    z-index: 1;
 }
 
 .home-welcome__button {
@@ -42,8 +81,7 @@
     padding: 16px 40px 16px 50px;
     gap: 20px;
     bottom: 50px;
-    position: fixed;
-    background: #EB6C27;
+    background: var(--primary);
     color: white;
 }
 
@@ -53,3 +91,6 @@
     display: inline-block;
     transform: rotate(90deg);
 }
+
+
+
