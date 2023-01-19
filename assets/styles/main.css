@@ -16,6 +16,15 @@ body{
     justify-content: center;
 }
 
+.btn {
+    text-decoration: none;
+    color: var(--primary);
+    padding: 0.8em 2em 0.8em 2em;
+    display: block;
+    width: fit-content;
+    z-index: 999;
+    position: relative;
+}
 /* Scrollbar CSS */
 /* Firefox */
 * {
@@ -46,29 +55,39 @@ body{
 
 .navbar {
     position: absolute;
-    height: 92px;
+    height: 80px;
     top: 0;
     display: flex;
     background-color: white;
     width: 100% ;
     z-index: 99;
     margin: auto;
-    padding: 1em;
     justify-content: space-between;
 }
 
 .navbar__brand {
     display: flex;
-    max-width: 25%;
+    margin: 1em;
 }
 
 .navbar-links {
     height: 100%;
 }
 
+.navbar-links {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    margin: 0;
+}
+
 .navbar-links li {
-    display: inline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
+    height: fit-content;
+    padding: 2.25em 2em 2.25em 2em;
 }
 
 /* footer */
@@ -79,6 +98,21 @@ body{
     background-color: var(--primary);
     z-index: 2;
     height: 200px;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__header {
+    color: white;
+    font-size: 8vw;
+    text-align: center;
+}
+
+.footer__text {
+    color: white;
+    text-align: center;
+    margin-bottom: 2em;
 }
 
 /* Home */
@@ -134,15 +168,8 @@ body{
     z-index: 1;
 }
 
-.home-welcome__button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: .5em 2em .5em 2em;
+.bt {
     bottom: 50px;
-    background: var(--primary);
-    color: white;
 }
 
 .home-welcome__button::after {
