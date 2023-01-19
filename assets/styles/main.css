@@ -2,6 +2,8 @@
     --primary: #EB6C27;
     --text: #3a3a3a;
     --text-grey: #888888;
+    --hover-primary: #c2581e;
+    --transition: .2s all ease;
 }
 
 /* basics */
@@ -17,14 +19,39 @@ body{
 }
 
 .btn {
+    display: flex;
     text-decoration: none;
-    color: var(--primary);
     padding: 0.8em 2em 0.8em 2em;
-    display: block;
     width: fit-content;
-    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
     position: relative;
+    gap: 1em;
+    font-size: max(3vw, 1em);
+    transition: var(--transition);
 }
+
+.btn--primary {
+    color: white;
+    background-color: var(--primary);
+}
+
+.btn--light {
+    color: var(--primary);
+    background-color: white;
+}
+
+.btn--hero {
+    bottom: 50px;
+}
+
+.btn--hero::after {
+    content: '\203A';
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
 /* Scrollbar CSS */
 /* Firefox */
 * {
@@ -34,7 +61,7 @@ body{
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-    width: 10px;
+    width: 0.5em;
 }
 
 *::-webkit-scrollbar-track {
@@ -43,11 +70,11 @@ body{
 
 *::-webkit-scrollbar-thumb {
     background-color: var(--primary);
-    border-radius: .5em;
 }
 
 .container {
     z-index: 2;
+    flex-grow: 1;
     position: relative;
 }
 
@@ -75,19 +102,26 @@ body{
 }
 
 .navbar-links {
-    height: 100%;
-    width: fit-content;
-    display: flex;
+    top: 85px;
+    padding: 0;
     margin: 0;
+    left: 50%;
+    transform: translate(-50%);
+    list-style: none;
+    position: absolute;
+    width: 88.89%;
+    display: none;
 }
 
 .navbar-links li {
     display: flex;
-    justify-content: center;
     align-items: center;
     list-style: none;
-    height: fit-content;
-    padding: 2.25em 2em 2.25em 2em;
+}
+
+.navbar-links__link {
+    padding: 1em;
+    text-decoration: none;
 }
 
 /* footer */
@@ -97,22 +131,24 @@ body{
     flex-direction: column;
     background-color: var(--primary);
     z-index: 2;
-    height: 200px;
-    padding: 1em;
+    height: fit-content;
+    padding: 2em 2em 2em 2em;
     justify-content: center;
     align-items: center;
+    color: white;
+    gap: 1em;
 }
 
-.footer__header {
-    color: white;
-    font-size: 8vw;
+.footer__heading {
     text-align: center;
+    font-size: 6vw;
+    padding: 0;
+    margin: 0;
 }
 
 .footer__text {
-    color: white;
     text-align: center;
-    margin-bottom: 2em;
+    font-size: 3vw;
 }
 
 /* Home */
@@ -129,7 +165,7 @@ body{
     object-fit: cover;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     background: linear-gradient(0deg, rgba(36, 36, 36, 0.4), rgba(36, 36, 36, 0.4)), linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #42332A 0%, rgba(255, 255, 255, 0) 100%), url("../media/pageheader-1920w.jpg") no-repeat fixed center;
     background-size: cover;
@@ -137,7 +173,6 @@ body{
 }
 
 .home-welcome-text {
-    bottom: 200px;
     color: white;
     letter-spacing: -0.05em;
 }
@@ -150,13 +185,13 @@ body{
 
 .home-welcome-text__heading--1 {
     font-weight: 800;
-    font-size: 8vw;
+    font-size: max(8vw, 2em);
     text-wrap: none;
 }
 
 .home-welcome-text__heading--2 {
     font-weight: 300;
-    font-size: 4vw;
+    font-size: max(4vw, 1em);
 }
 
 .welcome-hero > * {
@@ -168,31 +203,39 @@ body{
     z-index: 1;
 }
 
-.bt {
-    bottom: 50px;
-}
-
-.home-welcome__button::after {
-    content: '\203A';
-    font-size: 2em;
-    display: inline-block;
-    transform: rotate(90deg);
-    margin-left: .5em;
-}
-
 /* Media quaries */
 
-@media (min-width: 330px) {
-}
-
-@media (min-width: 820px) {
+@media (min-width: 880px) {
     .navbar {
         margin-top: 2em;
         width: 80%;
     }
-}
+    .btn--primary:hover {
+        background-color: var(--hover-primary);
+    }
+    .btn--light:hover {
+        opacity: .6;
+    }
+    .home-welcome-text {
+        bottom: 200px;
+    }
+    .footer__heading {
+        font-size: 3em;
+    }
+    .footer__text {
+        font-size: 1em;
+    }
 
-@media (min-width: 1150px) {
+    .btn {
+        font-size: 1em;
+    }
+    .navbar-links {
+        transform: unset;
+        width: fit-content;
+        position: unset;
+        height: 100%;
+        display: flex;
+    }
 }
 
 @media (min-width: 1280px) {
@@ -200,7 +243,6 @@ body{
 
 @media(prefers-reduced-motion) {
     html {
-        scroll-behavior: unset;
+        scroll-behavior: auto;
     }
 }
-
