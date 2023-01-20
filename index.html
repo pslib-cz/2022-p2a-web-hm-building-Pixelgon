@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta charset="UTF-8">
@@ -14,13 +13,18 @@
 <header class="welcome-hero">
     <nav class="navbar">
         <a class="navbar__brand"><img src="assets/media/logo.png" alt="Logo HM Building"></a>
-        <ul class="navbar-links">
-            <li><a class="navbar-links__link">DOMŮ</a></li>
-            <li><a class="navbar-links__link" href="#services">SLUŽBY</a></li>
-            <li><a class="navbar-links__link" href="#reference">REFERENCE</a></li>
-            <li><a class="navbar-links__link" href="about.html">O NÁS</a></li>
-            <li><a class="navbar-links__link" href="contacts.html">KONTAKT</a></li>
-        </ul>
+        <div class="navbar-links">
+            <div class="navbar-link-container navbar-link-container--activate"><a class="navbar-link-container__link">DOMŮ</a></div>
+            <div class="navbar-link-container"><a class="navbar-link-container__link" href="#services">SLUŽBY</a></div>
+            <div class="navbar-link-container"><a class="navbar-link-container__link" href="#reference">REFERENCE</a></div>
+            <div class="navbar-link-container"><a class="navbar-link-container__link" href="about.html">O NÁS</a></div>
+            <div class="navbar-link-container"><a class="navbar-link-container__link" href="contacts.html">KONTAKT</a></div>
+        </div>
+        <button class="navbar__hamburger-icon navbar__hamburger" aria-label="navbarbutton">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
     <div class="home-welcome-text">
         <h1 class="home-welcome-text__heading home-welcome-text__heading--1">HM Building.cz s.r.o.</h1>
