@@ -7,6 +7,6 @@ icons.forEach (icon => {
         icon.classList.toggle("open");
     });
     hamburger.addEventListener('click', () => {
-        menu.classList.toggle('is-open');
+        menu.classList.toggle('open');
     })
 });

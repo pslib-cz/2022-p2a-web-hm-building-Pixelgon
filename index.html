@@ -14,35 +14,83 @@
     <nav class="navbar">
         <a class="navbar__logo"><img src="assets/media/logo.png" alt="logo"></a>
         <menu class="navbar__menu">
-            <li><a class="navbar__link navbar__link--activate" >DOMŮ</a></li>
-            <li><a class="navbar__link" href="#services">SLUŽBY</a></li>
-            <li><a class="navbar__link" href="#reference">REFERENCE</a></li>
-            <li><a class="navbar__link" href="about.html">PROJEKTY</a></li>
-            <li><a class="navbar__link" href="contacts.html">KONTAKT</a></li>
+            <li class="navbar__button navbar__button--activate"><a class="navbar__link" >DOMŮ</a></li>
+            <li class="navbar__button"><a class="navbar__link" href="#services">SLUŽBY</a></li>
+            <li class="navbar__button"><a class="navbar__link" href="#reference">REFERENCE</a></li>
+            <li class="navbar__button"><a class="navbar__link" href="about.html">PROJEKTY</a></li>
+            <li class="navbar__button"><a class="navbar__link" href="contacts.html">KONTAKT</a></li>
         </menu>
 
         <a href="javascript:void(0)" class="navbar__hamburger navbar__hamburger-icon" rel="nofollow">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span class="navbar__hamburger-title">MENU</span>
+            <span class="navbar__hamburger-floor"></span>
+            <span class="navbar__hamburger-floor"></span>
+            <span class="navbar__hamburger-floor"></span>
         </a>
     </nav>
     <div class="welcome-hero">
         <div class="home-welcome-text">
-            <h1 class="home-welcome-text__heading home-welcome-text__heading--1">HM Building.cz s.r.o.</h1>
-            <h2 class="home-welcome-text__heading home-welcome-text__heading--2">liberecká stavební společnost</h2>
+            <h1 class="home-welcome-text__heading home-welcome-text__heading">HM Building.cz s.r.o.</h1>
+            <h2 class="home-welcome-text__slogan">liberecká stavební společnost</h2>
         </div>
-        <a class="btn btn--hero btn--primary" href="#first">pokračovat</a>
+        <a class="btn btn--hero btn--primary" href="#services">pokračovat</a>
 </div>
 </header>
-<section class="container" id="first">
+<main>
+<section class="container" id="services">
+    <h2 class="container__title">Využijte škálu našich <span class="orange">služeb</span></h2>
+    <p class="container__paragraph">Ačkoliv provádíme především <strong>průmyslové stavby</strong>, není pro nás problém postavit Vám <strong>rodinný domek na klíč</strong>
+        , nebo jen hrubou stavbu. Nejsou nám cizí ani <strong>rekonstrukce budov</strong> a jejich
+        údržba a to včetně okolních ploch.</p>
+    <article class="service">
+        <img class="service__img service__img--left" src="./assets/media/sluzba-novostavby-1200w.jpg" alt="prumyslove stavby">
+        <div class="service__text">
+            <h2 class="service__heading">Novostavby</h2>
+            <p class="service_paragraph">Dle požadavků investora jsme schopní dodat <strong>kompletní stavbu na klíč</strong>, případně zhotovit ucelenou část.
+            Jsme schopni zajistit také projektovou dokumentaci.</p>
+            <p class="service_paragraph">Provádíme stavby jak průmyslového typu, tak rodinné stavby.</p>
+            <a class="btn btn--light btn--outlined " href="./service_new_buildings.html">Zobrazit více</a>
+        </div>
+    </article>
+    <article class="service">
 
+        <div class="service__text">
+            <h2 class="service__heading">Průmyslové stavby</h2>
+            <p class="service_paragraph">Dle požadavků investora jsme schopní dodat <strong>kompletní stavbu na klíč</strong>, případně zhotovit ucelenou část.
+                Jsme schopni zajistit také projektovou dokumentaci.</p>
+            <p class="service_paragraph">Provádíme stavby jak průmyslového typu, tak rodinné stavby.</p>
+            <a class="btn btn--light btn--outlined " href="./service_new_buildings.html">Zobrazit více</a>
+        </div>
+        <img class="service__img service__img--left" src="./assets/media/sluzba-novostavby-1200w.jpg" alt="prumyslove stavby">
+    </article>
+    <article class="service">
+        <img class="service__img service__img--left" src="./assets/media/sluzba-novostavby-1200w.jpg" alt="prumyslove stavby">
+        <div class="service__text">
+            <h2 class="service__heading">Rekonstrukce domů a jiných staveb</h2>
+            <p class="service_paragraph">Dle požadavků investora jsme schopní dodat <strong>kompletní stavbu na klíč</strong>, případně zhotovit ucelenou část.
+                Jsme schopni zajistit také projektovou dokumentaci.</p>
+            <p class="service_paragraph">Provádíme stavby jak průmyslového typu, tak rodinné stavby.</p>
+            <a class="btn btn--light btn--outlined " href="./service_new_buildings.html">Zobrazit více</a>
+        </div>
+    </article>
+    <article class="service">
+        <div class="service__text">
+            <h2 class="service__heading">Komunikace a zpevněné plochy
+            </h2>
+            <p class="service_paragraph">Dle požadavků investora jsme schopní dodat <strong>kompletní stavbu na klíč</strong>, případně zhotovit ucelenou část.
+                Jsme schopni zajistit také projektovou dokumentaci.</p>
+            <p class="service_paragraph">Provádíme stavby jak průmyslového typu, tak rodinné stavby.</p>
+            <a class="btn btn--light btn--outlined " href="./service_new_buildings.html">Zobrazit více</a>
+        </div>
+        <img class="service__img service__img--left" src="./assets/media/sluzba-novostavby-1200w.jpg" alt="prumyslove stavby">
+    </article>
 </section>
-
+</main>
 <footer class="footer">
     <h2 class="footer__heading">Plácneme si pro Váš projekt?</h2>
     <p class="footer__text">Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
     <a class="btn btn--light" href="contacts.html">Nezávazně poptat</a>
 </footer>
+<script defer src="./assets/main.js"></script>
 </body>
 </html>

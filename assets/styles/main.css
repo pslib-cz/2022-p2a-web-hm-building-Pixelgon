@@ -44,6 +44,11 @@ body{
     background-color: white;
 }
 
+.btn--outlined {
+    border: 1px var(--primary);
+    outline-style: dashed;
+}
+
 .btn--hero {
     bottom: 50px;
 }
@@ -52,6 +57,32 @@ body{
     content: '\203A';
     display: inline-block;
     transform: rotate(90deg);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    z-index: 2;
+    padding: 8em 6vw 8em 6vw;
+    overflow: hidden;
+    background-color: white;
+    flex-grow: 1;
+}
+
+.container__title {
+    text-align: start;
+    width: 100%;
+}
+
+.container__paragraph {
+    text-align: start;
+    width: 100%;
+}
+
+.orange {
+    color: var(--primary);
 }
 
 /* Scrollbar CSS */
@@ -74,14 +105,10 @@ body{
     background-color: var(--primary);
 }
 
-.container {
-    z-index: 2;
-    flex-grow: 1;
-    position: relative;
-}
+
+
 
 /* navbar */
-
 
 .navbar {
     position: relative;
@@ -90,36 +117,42 @@ body{
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    height: 54px;
+    height: 70px;
 }
 
 .navbar__logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 50%;
+    margin-left: 1em;
 }
 
-.navbar__logo img {
-}
 
 .navbar__logo img {
-    object-fit: cover;
     height: 100%;
     transition: all .2s ease;
 }
 
 .navbar__hamburger{
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 53px;
     position: relative;
     cursor: pointer;
     appearance: none;
     outline: none;
     border: none;
     background: none;
+    margin-right: 1em;
 }
-.navbar__hamburger span{
+
+.navbar__hamburger-title {
+    position: absolute;
+    font-size: 15px;
+    color: var(--text-grey);
+}
+
+.navbar__hamburger-floor{
     position: absolute;
     background: var(--grad);
     transition: .3s cubic-bezier(.8, .5, .2, 1.4);
@@ -131,51 +164,64 @@ body{
     left: 0;
 }
 .navbar__hamburger span:nth-child(2){
-    top: 14px;
+    top: 17px;
     left: 0;
 }
 .navbar__hamburger span:nth-child(3){
-    bottom:0;
+    top: 31px;
+    left: 0;
+}
+
+.navbar__hamburger span:nth-child(4){
+    bottom: 0;
     left: 0;
 }
 
 .navbar__hamburger.open span:nth-child(1){
-    transform: rotate(45deg);
-    top: 13px;
-}
-.navbar__hamburger.open span:nth-child(2){
     transform: scale(0);
     transition-duration: 50ms
 }
+
+.navbar__hamburger.open span:nth-child(2){
+    transform: rotate(45deg);
+    top: 13px;
+}
 .navbar__hamburger.open span:nth-child(3){
+    transform: scale(0);
+    transition-duration: 50ms
+}
+.navbar__hamburger.open span:nth-child(4){
     top: 13px;
     transform: rotate(-45deg);
+}
 
+.navbar__hamburger.open {
+    height: 34px;
 }
 
 .navbar__menu {
-    position: fixed;
+    position: absolute;
     left: 0;
     width: 100%;
     height: 0;
     top: 70px;
     opacity: 0;
     background-color: #fff;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     margin: 0;
     padding: 1em 0 0 0;
 }
 
-.navbar__menu li {
-    display: none;
+.navbar__button {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-.navbar__menu.is-open li {
+.navbar__menu.open .navbar__button {
     display: block;
 }
 
-.navbar__menu.is-open {
+.navbar__menu.open {
     transition: all .2s ease;
     display: block;
     opacity: 1;
@@ -185,7 +231,7 @@ body{
 
 .navbar__link {
     display: block;
-    padding: 1rem;
+    padding: 2.25em 2em 2.25em 2em;
     color: var(--text-grey);
     text-align: center;
     text-decoration: none;
@@ -195,16 +241,14 @@ body{
     touch-action: none;
 }
 
-.navbar__link--activate, .navbar__link:hover {
-    color: white;
+.navbar__button--activate, .navbar__button:hover {
     background-color: var(--primary);
 }
 
-.navbar__menu li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.navbar__button--activate > .navbar__link, .navbar__button:hover > .navbar__link {
+    color: white;
 }
+
 
 
 /* footer */
@@ -255,26 +299,23 @@ body{
     flex-direction: column;
 }
 
-.home-welcome-text {
+.home-welcome-text > * {
     color: white;
     letter-spacing: -0.05em;
-}
-
-.home-welcome-text__heading {
     padding: 0;
     margin: 0;
     text-align: center;
 }
 
-.home-welcome-text__heading--1 {
-    font-weight: 800;
-    font-size: max(8vw, 2em);
-    text-wrap: none;
+.home-welcome-text__heading {
+    font-weight: 700;
+    font-size: max(7vw, 2em);
+    margin-bottom: 2vh;
 }
 
-.home-welcome-text__heading--2 {
-    font-weight: 300;
-    font-size: max(4vw, 1em);
+.home-welcome-text__slogan {
+    font-weight: 200;
+    font-size: max(3vw, 1em);
 }
 
 .welcome-hero > * {
@@ -285,6 +326,27 @@ body{
     background-size: cover;
     z-index: 1;
 }
+
+/* Services */
+
+.service {
+
+}
+
+.service__img {
+    width: 100%;
+    height: 10em;
+    object-fit: cover;
+}
+
+.service__img--left {
+    border-radius: 0 0 40px 0;
+}
+
+.service__img--right {
+    border-radius: 0 0 0 40px;
+}
+
 
 /* Media quaries */
 
@@ -308,24 +370,24 @@ body{
         align-items: center;
         padding: 0;
         left: unset;
-        width: auto;
-        height: auto;
+        width: fit-content;
+        height: 100%;
         top: unset;
         transition: 0s;
     }
 
     .navbar__menu li {
-        display: block;
+        display: flex;
     }
 
     .navbar__link {
         text-decoration: none;
         font-size: 1.2em;
-        padding: .75em;
         position: relative;
+
     }
 
-    .navbar__menu.is-open {
+    .navbar__menu.open {
         display: flex;
     }
 }
@@ -350,6 +412,19 @@ body{
 
     .btn {
         font-size: 1em;
+    }
+
+    .service {
+        display: flex;
+        width: 60vw;
+        gap: 3em;
+        height: 30vh;
+        margin: 5em auto 0 auto;
+    }
+
+    .service__img {
+        height: 100%;
+        width: calc(50% - 3em);
     }
 
 }
@@ -383,6 +458,20 @@ body{
     .navbar__hamburger {
         display: none;
     }
+    .container__title {
+        font-size: 3.5em;
+        margin: 0 0 48px 0;
+        text-align: center;
+    }
+    .container__paragraph {
+        width: 40vw;
+        text-align: center;
+    }
+
+    .service__heading {
+        font-size: 2.5em;
+    }
+
 }
 
 @media(prefers-reduced-motion) {
