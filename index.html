@@ -10,27 +10,30 @@
     <link rel="stylesheet" href="assets/styles/typography.css">
 </head>
 <body>
-<header class="welcome-hero">
+<header>
     <nav class="navbar">
-        <a class="navbar__brand"><img src="assets/media/logo.png" alt="Logo HM Building"></a>
-        <div class="navbar-links">
-            <div class="navbar-link-container navbar-link-container--activate"><a class="navbar-link-container__link">DOMŮ</a></div>
-            <div class="navbar-link-container"><a class="navbar-link-container__link" href="#services">SLUŽBY</a></div>
-            <div class="navbar-link-container"><a class="navbar-link-container__link" href="#reference">REFERENCE</a></div>
-            <div class="navbar-link-container"><a class="navbar-link-container__link" href="about.html">O NÁS</a></div>
-            <div class="navbar-link-container"><a class="navbar-link-container__link" href="contacts.html">KONTAKT</a></div>
-        </div>
-        <button class="navbar__hamburger-icon navbar__hamburger" aria-label="navbarbutton">
+        <a class="navbar__logo"><img src="assets/media/logo.png" alt="logo"></a>
+        <menu class="navbar__menu">
+            <li><a class="navbar__link navbar__link--activate" >DOMŮ</a></li>
+            <li><a class="navbar__link" href="#services">SLUŽBY</a></li>
+            <li><a class="navbar__link" href="#reference">REFERENCE</a></li>
+            <li><a class="navbar__link" href="about.html">PROJEKTY</a></li>
+            <li><a class="navbar__link" href="contacts.html">KONTAKT</a></li>
+        </menu>
+
+        <a href="javascript:void(0)" class="navbar__hamburger navbar__hamburger-icon" rel="nofollow">
             <span></span>
             <span></span>
             <span></span>
-        </button>
+        </a>
     </nav>
-    <div class="home-welcome-text">
-        <h1 class="home-welcome-text__heading home-welcome-text__heading--1">HM Building.cz s.r.o.</h1>
-        <h2 class="home-welcome-text__heading home-welcome-text__heading--2">liberecká stavební společnost</h2>
-    </div>
-    <a class="btn btn--hero btn--primary" href="#first">pokračovat</a>
+    <div class="welcome-hero">
+        <div class="home-welcome-text">
+            <h1 class="home-welcome-text__heading home-welcome-text__heading--1">HM Building.cz s.r.o.</h1>
+            <h2 class="home-welcome-text__heading home-welcome-text__heading--2">liberecká stavební společnost</h2>
+        </div>
+        <a class="btn btn--hero btn--primary" href="#first">pokračovat</a>
+</div>
 </header>
 <section class="container" id="first">
 
