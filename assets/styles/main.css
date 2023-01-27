@@ -105,9 +105,6 @@ body{
     background-color: var(--primary);
 }
 
-
-
-
 /* navbar */
 
 .navbar {
@@ -125,7 +122,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 50%;
-    margin-left: 1em;
+    margin-left: 24px;
 }
 
 
@@ -136,19 +133,20 @@ body{
 
 .navbar__hamburger{
     width: 44px;
-    height: 53px;
+    height: 49px;
     position: relative;
     cursor: pointer;
     appearance: none;
     outline: none;
     border: none;
     background: none;
-    margin-right: 1em;
+    margin-right: 24px;
 }
 
 .navbar__hamburger-title {
     position: absolute;
     font-size: 15px;
+    line-height: 11px;
     color: var(--text-grey);
 }
 
@@ -164,11 +162,11 @@ body{
     left: 0;
 }
 .navbar__hamburger span:nth-child(2){
-    top: 17px;
+    top: 13px;
     left: 0;
 }
 .navbar__hamburger span:nth-child(3){
-    top: 31px;
+    top: 27px;
     left: 0;
 }
 
@@ -201,14 +199,28 @@ body{
 
 .navbar__menu {
     position: absolute;
-    left: 0;
-    width: 100%;
     height: 0;
-    top: 70px;
+    top: 100px;
     opacity: 0;
-    background-color: #fff;
+    background-color: var(--primary);
+    padding: 0;
     margin: 0;
-    padding: 1em 0 0 0;
+    width: calc(100% - 32px);
+    left: 16px;
+    display: none;
+}
+
+.navbar__menu::before {
+    content: "";
+    width: 0;
+    height: 0;
+    top: -30px;
+    position: absolute;
+    border-bottom: 15px solid var(--primary);
+    border-top: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    right: 0;
 }
 
 .navbar__button {
@@ -225,31 +237,22 @@ body{
     transition: all .2s ease;
     display: block;
     opacity: 1;
-    height: 100%;
+    height: fit-content;
+    width: 90%;
+    left: 5%;
 }
 
 
 .navbar__link {
     display: block;
-    padding: 2.25em 2em 2.25em 2em;
-    color: var(--text-grey);
-    text-align: center;
-    text-decoration: none;
+    color: white;
+    padding: 1em;
+    text-align: start;
     font-size: 1.25rem;
     font-weight: 500;
     transition: var(--transition);
     touch-action: none;
 }
-
-.navbar__button--activate, .navbar__button:hover {
-    background-color: var(--primary);
-}
-
-.navbar__button--activate > .navbar__link, .navbar__button:hover > .navbar__link {
-    color: white;
-}
-
-
 
 /* footer */
 
@@ -350,7 +353,7 @@ body{
 
 /* Media quaries */
 
-@media (min-width: 700px) {
+@media (min-width: 777px) {
 
     .navbar__logo img:hover {
         opacity: .6;
@@ -374,9 +377,10 @@ body{
         height: 100%;
         top: unset;
         transition: 0s;
+        background-color: white;
     }
 
-    .navbar__menu li {
+    .navbar__button {
         display: flex;
     }
 
@@ -384,11 +388,23 @@ body{
         text-decoration: none;
         font-size: 1.2em;
         position: relative;
-
+        color: var(--text-grey);
     }
 
     .navbar__menu.open {
         display: flex;
+    }
+
+    .navbar__button--activate, .navbar__button:hover {
+        background-color: var(--primary);
+    }
+
+    .navbar__menu::before {
+        display: none;
+    }
+
+    .navbar__button--activate > .navbar__link, .navbar__button:hover > .navbar__link {
+        color: white;
     }
 }
 
