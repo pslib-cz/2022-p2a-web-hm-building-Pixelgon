@@ -23,7 +23,7 @@ body{
 .btn {
     display: flex;
     text-decoration: none;
-    padding: 0.8em 2em 0.8em 2em;
+    padding: 1em 3em 1em 3em;
     width: fit-content;
     justify-content: center;
     align-items: center;
@@ -121,8 +121,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50%;
-    margin-left: 24px;
+    height: 49px;
+    margin-left: 5%;
 }
 
 
@@ -140,7 +140,7 @@ body{
     outline: none;
     border: none;
     background: none;
-    margin-right: 24px;
+    margin-right: 5%;
 }
 
 .navbar__hamburger-title {
@@ -220,7 +220,7 @@ body{
     border-top: 15px solid transparent;
     border-right: 15px solid transparent;
     border-left: 15px solid transparent;
-    right: 0;
+    right: 7px;
 }
 
 .navbar__button {
@@ -244,14 +244,16 @@ body{
 
 
 .navbar__link {
-    display: block;
     color: white;
-    padding: 1em;
     text-align: start;
     font-size: 1.25rem;
     font-weight: 500;
     transition: var(--transition);
     touch-action: none;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 /* footer */
@@ -359,14 +361,16 @@ body{
         opacity: .6;
     }
 
-    .navbar__link:hover {
-    }
-
     .navbar__hamburger {
         display: none;
     }
 
-    .navbar__menu {
+    .navbar__logo {
+        margin-left: 1em;
+        height: calc(100% - 2em);
+    }
+
+    .navbar__menu, .navbar__menu.open {
         opacity: 1;
         position: static;
         display: flex;
@@ -389,6 +393,7 @@ body{
         font-size: 1.2em;
         position: relative;
         color: var(--text-grey);
+        padding: 0 1em 0 1em;
     }
 
     .navbar__menu.open {
