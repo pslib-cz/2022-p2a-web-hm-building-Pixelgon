@@ -224,8 +224,6 @@ body{
 }
 
 .navbar__button {
-    justify-content: center;
-    align-items: center;
     height: 100%;
 }
 
@@ -385,7 +383,7 @@ body{
     }
 
     .navbar__button {
-        display: flex;
+        list-style: none;
     }
 
     .navbar__link {
