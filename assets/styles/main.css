@@ -489,7 +489,7 @@ main {
 
 /* Media quaries */
 
-@media (min-width: 777px) {
+@media screen and (min-width: 777px) {
 
     .container {
         padding: 8em 0 8em 0;
@@ -671,7 +671,7 @@ main {
     }
 }
 
-@media (min-width: 1150px) {
+@media screen and (min-width: 1150px) {
     .container > * {
         max-width: 1500px;
     }
