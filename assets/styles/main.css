@@ -18,6 +18,12 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
 }
 
 .btn {
@@ -65,7 +71,9 @@ body{
     position: relative;
     flex-direction: column;
     z-index: 2;
-    padding: 8em 6vw 8em 6vw;
+    width: 88vw;
+    left: 6vw;
+    padding: 4em 0 4em 0;
     overflow: hidden;
     background-color: white;
     flex-grow: 1;
@@ -76,10 +84,17 @@ body{
     width: 100%;
 }
 
+.container__title--2 {
+    text-align: start;
+    width: 100%;
+}
+
 .container__paragraph {
     text-align: start;
     width: 100%;
 }
+
+
 
 .orange {
     color: var(--primary);
@@ -214,7 +229,7 @@ body{
     content: "";
     width: 0;
     height: 0;
-    top: -30px;
+    top: -29px;
     position: absolute;
     border-bottom: 15px solid var(--primary);
     border-top: 15px solid transparent;
@@ -289,9 +304,9 @@ body{
     justify-content: center;
 }
 
-.welcome-hero {
+.header {
     background-blend-mode: normal, normal, hue, normal;
-    height: 100vh;
+    height: 134px;
     object-fit: cover;
     width: 100%;
     display: flex;
@@ -302,7 +317,11 @@ body{
     flex-direction: column;
 }
 
-.home-welcome-text > * {
+.header--home {
+    height: 100vh;
+}
+
+.header__text > * {
     color: white;
     letter-spacing: -0.05em;
     padding: 0;
@@ -310,18 +329,18 @@ body{
     text-align: center;
 }
 
-.home-welcome-text__heading {
+.header__heading {
     font-weight: 700;
     font-size: max(7vw, 2em);
     margin-bottom: 2vh;
 }
 
-.home-welcome-text__slogan {
+.header__slogan {
     font-weight: 200;
     font-size: max(3vw, 1em);
 }
 
-.welcome-hero > * {
+.header > * {
     background-attachment: fixed;
     position: fixed;
     background-position: center;
@@ -333,13 +352,13 @@ body{
 /* Services */
 
 .service {
-
+    margin-top: 3em;
 }
 
 .service__img {
-    width: 100%;
-    height: 10em;
     object-fit: cover;
+    width: 100%;
+    height: 300px;
 }
 
 .service__img--left {
@@ -350,10 +369,78 @@ body{
     border-radius: 0 0 0 40px;
 }
 
+.service__paragraph {
+    margin-top: 0;
+}
+
+.btn--service {
+    margin: 4px;
+}
+
+.container__list {
+    width: 100%;
+    list-style: disc;
+}
+
+.container__list li::marker {
+    color: var(--primary);
+}
+
+/* Reference */
+
+.reference-header {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(0deg, rgba(36, 36, 36, 0.8), rgba(36, 36, 36, 0.8)), linear-gradient(180deg, rgba(66, 51, 42, 0.4) 0%, rgba(255, 255, 255, 0) 100%), url("../media/background-CTAblock-4460w.jpg") fixed center no-repeat;
+    padding: 2em 6vw 2em 6vw;
+    background-size: cover;
+}
+
+.reference-header__text {
+    font-size: min(3vw, 2em);
+    text-align: start;
+    width: 50%;
+    color: white;
+    margin-top: 0;
+}
+
+.reference__grid {
+    display: grid;
+    margin: 6em 0 6em 0;
+    width: 100%;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+}
+
+
+/* Kontakt */
+
+.contact {
+    width: 100%;
+}
+
+.contact__list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+.contact__map {
+    position: relative;
+    height: 300px;
+}
 
 /* Media quaries */
 
 @media (min-width: 777px) {
+
+    .container {
+        padding: 8em 0 8em 0;
+
+    }
 
     .navbar__logo img:hover {
         opacity: .6;
@@ -409,22 +496,23 @@ body{
     .navbar__button--activate > .navbar__link, .navbar__button:hover > .navbar__link {
         color: white;
     }
-}
-
-@media (min-width: 880px) {
 
     .btn--primary:hover {
         background-color: var(--hover-primary);
     }
+
     .btn--light:hover {
         opacity: .6;
     }
-    .home-welcome-text {
+
+    .header__text {
         bottom: 200px;
     }
+
     .footer__heading {
         font-size: 3em;
     }
+
     .footer__text {
         font-size: 1em;
     }
@@ -435,20 +523,93 @@ body{
 
     .service {
         display: flex;
-        width: 60vw;
         gap: 3em;
-        height: 30vh;
-        margin: 5em auto 0 auto;
+        max-width: 1500px;
+        margin: 6em auto 0 auto;
+        height: 300px;
+    }
+
+    .service:nth-child(2n) {
+        flex-direction: row-reverse;
+    }
+
+    .service__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .service__heading {
+        margin-top: 0;
     }
 
     .service__img {
-        height: 100%;
-        width: calc(50% - 3em);
+        width: calc(50% - 1.5em);
+        height: auto;
     }
 
+    .reference-header {
+        padding: 6em 6vw 6em 6vw;
+    }
+
+    .reference__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 1em;
+    }
+
+    .container__list li {
+        margin-left: 6em;
+    }
+
+    .container__list--2 li {
+        margin-left: 2em;
+    }
+
+    .contact {
+        display: flex;
+        height: 600px;
+        justify-content: center;
+        width: 100%;
+        gap: 3em;
+        margin-top: 6em;
+    }
+
+    .contact__list {
+        width: calc(30% - 1.5em);
+        height: 100%;
+    }
+
+    .contact__map {
+        height: 100%;
+        width: calc(70% - 1.5em);
+    }
+
+    .contact__map iframe {
+        z-index: 2;
+        position: absolute;
+        opacity: .5;
+        transition: var(--transition);
+    }
+
+    .contact__map-bcg {
+        z-index: 1;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary);
+    }
+
+    .contact__map iframe:hover {
+        opacity: 1;
+    }
 }
 
 @media (min-width: 1150px) {
+    .container > * {
+        max-width: 1500px;
+    }
+
     .navbar-links {
         transform: unset;
         width: fit-content;
@@ -458,15 +619,18 @@ body{
         align-items: center;
         gap: 1em;
     }
+
     .navbar-link-container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
     }
+
     .navbar-link-container__link {
         padding: 2em;
     }
+
     .navbar {
         position: absolute;
         margin-top: 2em;
@@ -474,23 +638,32 @@ body{
         left: 50%;
         transform: translate(-50%, 0);
     }
+
     .navbar__hamburger {
         display: none;
     }
+
     .container__title {
         font-size: 3.5em;
         margin: 0 0 48px 0;
         text-align: center;
     }
+
     .container__paragraph {
-        width: 40vw;
         text-align: center;
+    }
+
+    .container__paragraph--start {
+        text-align: start;
     }
 
     .service__heading {
         font-size: 2.5em;
     }
 
+    .reference__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
 
 @media(prefers-reduced-motion) {

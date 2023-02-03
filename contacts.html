@@ -11,36 +11,50 @@
     <link rel="stylesheet" href="assets/styles/typography.css">
 </head>
 <body>
-<header class="welcome-hero">
-    <nav class="navbar">
-        <a class="navbar__brand"><img src="assets/media/logo.png" alt="Logo HM Building"></a>
-        <div class="navbar-links">
-            <div class="navbar-link-container"><a class="navbar-link-container__link" href="index.html">DOMŮ</a></div>
-            <div class="navbar-link-container"><a class="navbar-link-container__link" href="index.html#services">SLUŽBY</a></div>
-            <div class="navbar-link-container"><a class="navbar-link-container__link" href="index.html#reference">REFERENCE</a></div>
-            <div class="navbar-link-container"><a class="navbar-link-container__link" href="about.html">O NÁS</a></div>
-            <div class="navbar-link-container navbar-link-container--activate"><a class="navbar-link-container__link">KONTAKT</a></div>
+    <header>
+        <nav class="navbar">
+            <a class="navbar__logo" href="index.html"><img src="assets/media/logo.png" alt="logo"></a>
+            <menu class="navbar__menu">
+                <li class="navbar__button"><a href="index.html" class="navbar__link" >DOMŮ</a></li>
+                <li class="navbar__button"><a class="navbar__link" href="index.html#services">SLUŽBY</a></li>
+                <li class="navbar__button"><a class="navbar__link" href="index.html#reference">REFERENCE</a></li>
+                <li class="navbar__button"><a class="navbar__link" href="about.html">O NÁS</a></li>
+                <li class="navbar__button navbar__button--activate"><a class="navbar__link" href="contacts.html">KONTAKT</a></li>
+            </menu>
+
+            <a href="javascript:void(0)" class="navbar__hamburger navbar__hamburger-icon" rel="nofollow">
+                <span class="navbar__hamburger-title">MENU</span>
+                <span class="navbar__hamburger-floor"></span>
+                <span class="navbar__hamburger-floor"></span>
+                <span class="navbar__hamburger-floor"></span>
+            </a>
+        </nav>
+        <div class="header">
         </div>
-        <button class="navbar__hamburger-icon navbar__hamburger" aria-label="navbarbutton">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </nav>
-    <div class="home-welcome-text">
-        <h1 class="home-welcome-text__heading home-welcome-text__heading">HM Building.cz s.r.o.</h1>
-        <h2 class="home-welcome-text__heading home-welcome-text__slogan">liberecká stavební společnost</h2>
-    </div>
-    <a class="btn btn--hero btn--primary" href="#first">pokračovat</a>
-</header>
-<section class="container" id="first">
-
-</section>
-
-<footer class="footer">
-    <h2 class="footer__heading">Plácneme si pro Váš projekt?</h2>
-    <p class="footer__text">Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
-    <a class="btn btn--light" href="contacts.html">Nezávazně poptat</a>
-</footer>
+    </header>
+    <main>
+        <section class="container">
+            <h1 class="container__title">Kontaktujte nás</h1>
+            <p class="container__paragraph">Zavolejte anebo nám napište... kvalitní komunikace je jeden z pilířů, na kterém stavíme.</p>
+            <div class="contact">
+                <ul class="contact__list">
+                    <li>+420 775 550 564</li>
+                    <li>stavby@hm-building.cz</li>
+                    <li>Křižanská 12, Liberec XXII-Horní Suchá</li>
+                </ul>
+                <div class="contact__map">
+                    <iframe style="border:none" src="https://frame.mapy.cz/s/nacufohuha" width="100%" height="100%"></iframe>
+                    <div class="contact__map-bcg">
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <h2 class="footer__heading">Plácneme si pro Váš projekt?</h2>
+        <p class="footer__text">Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+        <a class="btn btn--light" href="contacts.html">Nezávazně poptat</a>
+    </footer>
+    <script defer src="./assets/main.js"></script>
 </body>
 </html>
