@@ -36,18 +36,40 @@
         <section class="container">
             <h1 class="container__title">Kontaktujte nás</h1>
             <p class="container__paragraph">Zavolejte anebo nám napište... kvalitní komunikace je jeden z pilířů, na kterém stavíme.</p>
-            <div class="contact">
-                <ul class="contact__list">
-                    <li>+420 775 550 564</li>
-                    <li>stavby@hm-building.cz</li>
-                    <li>Křižanská 12, Liberec XXII-Horní Suchá</li>
-                </ul>
+            <div class="contact__info">
+                <div class="contact__list">
+                    <a href="tel:+420775550564">+420 775 550 564</a>
+                    <a href="mailto:stavby@hm-building.cz">stavby@hm-building.cz</a>
+                    <a href="https://mapy.cz/s/bogesucuto">Křižanská 12, Liberec XXII-Horní Suchá</a>
+                </div>
                 <div class="contact__map">
                     <iframe style="border:none" src="https://frame.mapy.cz/s/nacufohuha" width="100%" height="100%"></iframe>
                     <div class="contact__map-bcg">
                 </div>
                 </div>
             </div>
+            <form class="contact__form">
+                <h2 class="container__title--2 --start">Nezávazná poptávka služeb</h2>
+                <p class="container__paragraph --start">Plácneme se pro Váš projekt? Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+                    <label for="name">Jméno a příjmení</label>
+                    <input type="text" id="name" name="name">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email">
+                    <label for="tel">Telefon</label>
+                    <input type="tel" id="tel" name="tel">
+                    <label for="sluzba">Poptávaná služba</label>
+                    <select name="sluzba">
+                        <option value="novostavba">Novostavba</option>
+                        <option value="prumstavba">Průmyslová stavba</option>
+                        <option value="rekonstrukce">Rekonstrukce domů a jiných staveb</option>
+                        <option value="kominukace">Komunikace a zpevněné plochy</option>
+
+                    </select>
+                    <label for="poznamka">Poznámka</label>
+                    <textarea type="text" rows="10" id="poznamka" name="poznamka"></textarea>
+                    <a class="btn--primary btn btn--form" href="#">Odeslat nezávaznou poptávku</a>
+                </form>
+            </form>
         </section>
     </main>
     <footer class="footer">
