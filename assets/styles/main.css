@@ -250,7 +250,7 @@ main {
     transition: all .2s ease;
     display: block;
     opacity: 1;
-    height: fit-content;
+    height: auto;
     width: 90%;
     left: 5%;
 }
@@ -312,7 +312,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(0deg, rgba(36, 36, 36, 0.4), rgba(36, 36, 36, 0.4)), linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #42332A 0%, rgba(255, 255, 255, 0) 100%), url("../media/pageheader-1920w.jpg") no-repeat fixed center;
+    background: linear-gradient(0deg, rgba(36, 36, 36, 0.4), rgba(36, 36, 36, 0.4)), linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #42332A 0%, rgba(255, 255, 255, 0) 100%), url("../media/pageheader-1920w.jpg") no-repeat scroll center;
     background-size: cover;
     flex-direction: column;
 }
@@ -391,7 +391,7 @@ main {
 .reference-header {
     position: relative;
     z-index: 1;
-    background: linear-gradient(0deg, rgba(36, 36, 36, 0.8), rgba(36, 36, 36, 0.8)), linear-gradient(180deg, rgba(66, 51, 42, 0.4) 0%, rgba(255, 255, 255, 0) 100%), url("../media/background-CTAblock-4460w.jpg") fixed center no-repeat;
+    background: linear-gradient(0deg, rgba(36, 36, 36, 0.8), rgba(36, 36, 36, 0.8)), linear-gradient(180deg, rgba(66, 51, 42, 0.4) 0%, rgba(255, 255, 255, 0) 100%), url("../media/background-CTAblock-4460w.jpg") scroll center no-repeat;
     padding: 2em 6vw 2em 6vw;
     background-size: cover;
 }
@@ -404,15 +404,55 @@ main {
     margin-top: 0;
 }
 
-.reference__grid {
+.references {
     display: grid;
-    margin: 6em 0 6em 0;
-    width: 100%;
-    grid-auto-flow: column;
     grid-template-columns: 1fr;
     grid-auto-rows: 1fr;
+    margin: 3em 0 1.5em 0;
 }
 
+.references__img {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 90vh;
+    grid-auto-rows: 300px;
+    grid-gap: 1em;
+    justify-content: center
+}
+
+.gallery__item {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: var(--transition);
+}
+
+.gallery__item--2h {
+    grid-row: span 2;
+}
+
+.gallery__item--3h {
+    grid-row: span 3;
+}
+
+.references__item {
+    height: auto;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    position: relative;
+    margin-top: 1em;
+}
+
+.references {
+    width: 100%;
+}
 
 /* Kontakt */
 
@@ -463,10 +503,11 @@ main {
 .contact__form  {
     display: flex;
     flex-direction: column;
+    width: 88vw;
 }
 
 .contact__form label {
-    margin: 1em 0 .5em 0;
+    margin: .5em 0 .25em 0;
     font-size: 1.5em;
 }
 
@@ -489,7 +530,7 @@ main {
 
 /* Media quaries */
 
-@media screen and (min-width: 777px) {
+@media (min-width: 777px) {
 
     .container {
         padding: 8em 0 8em 0;
@@ -607,7 +648,7 @@ main {
     }
 
     .reference__grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 1em;
     }
 
@@ -669,11 +710,59 @@ main {
         color: var(--hover-primary);
         text-decoration: underline;
     }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery__item:hover {
+        scale: 1.1;
+    }
+
+    .references {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+        margin: 3em 0 3em 0;
+        flex-wrap: wrap;
+    }
+
+    .references__item {
+        width: auto;
+        margin-top: 0;
+    }
+
+    .references__img {
+        width: 480px;
+        height: 280px;
+        transition: var(--transition);
+        z-index: 2;
+    }
+
+    .references__overlay {
+        color: white;
+        width: 480px;
+        height: 280px;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--primary);
+    }
+    .references__item:hover .references__img {
+        opacity: 0.2;
+    }
 }
 
-@media screen and (min-width: 1150px) {
+
+@media (min-width: 1150px) {
+    .header, .reference-header {
+        background-attachment: fixed;
+    }
+
     .container > * {
-        max-width: 1500px;
+        max-width: 1700px;
     }
 
     .navbar-links {
@@ -728,10 +817,13 @@ main {
     }
 
     .reference__grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(3, 1fr);
     }
     .contact__form {
         width: 50%;
+    }
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
