@@ -778,10 +778,6 @@ main {
         background-attachment: fixed;
     }
 
-    .container > * {
-        max-width: 1600px;
-    }
-
     .navbar-links {
         transform: unset;
         width: fit-content;
