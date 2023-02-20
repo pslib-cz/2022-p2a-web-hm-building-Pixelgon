@@ -65,9 +65,10 @@ main {
     position: relative;
     z-index: 2;
     width: 88vw;
-    left: 6vw;
     padding: 4em 0 4em 0;
     background-color: white;
+    max-width: 1700px;
+    margin: 0 auto;
 }
 
 .container__title {
@@ -477,26 +478,6 @@ main {
     background-image: url("../media/icons/pin.svg");
 }
 
-.contact__map-bcg {
-    z-index: 1;
-    top: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary);
-}
-
-.contact__map iframe {
-    z-index: 2;
-    position: absolute;
-    opacity: .2;
-    transition: var(--transition);
-}
-
-.contact__map iframe:hover {
-    opacity: 1;
-}
-
 .contact__map {
     position: relative;
     height: 300px;
@@ -703,13 +684,24 @@ main {
         width: calc(60% - 1.5em);
     }
 
-    .gallery__item-bcg {
+    .contact__map-bcg, .gallery__item-bcg {
         z-index: 1;
         top: 0;
         position: absolute;
         width: 100%;
         height: 100%;
         background-color: var(--primary);
+    }
+    
+    .contact__map iframe {
+        z-index: 2;
+        position: absolute;
+        opacity: .2;
+        transition: var(--transition);
+    }
+    
+    .contact__map iframe:hover {
+        opacity: 1;
     }
 
     .contact__list {
