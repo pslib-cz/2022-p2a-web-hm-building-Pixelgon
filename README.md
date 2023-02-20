@@ -1,4 +1,3 @@
-# 2022-p2a-web-hm-building-Pixelgon
-2022-p2a-web-hm-building-Pixelgon created by GitHub Classroom
+# HM Building Matěj Matějka P2A
 
-https://pslib-cz.github.io/2022-p2a-web-hm-building-Pixelgon/
+[Github Pages](https://pslib-cz.github.io/2022-p2a-web-hm-building-Pixelgon/)

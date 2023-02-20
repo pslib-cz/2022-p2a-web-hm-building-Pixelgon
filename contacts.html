@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="UTF-8">
     <title>HM Building.cz | Kontaktuje nás</title>
+    <meta name="description" content="Zavolejte anebo nám napište... kvalitní komunikace je jeden z pilířů, na kterém stavíme.">
+    <meta name="og:description" content="Zavolejte anebo nám napište... kvalitní komunikace je jeden z pilířů, na kterém stavíme.">    
     <link rel="stylesheet" href="assets/styles/normalize.css">
     <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="stylesheet" href="assets/styles/typography.css">
@@ -34,7 +35,7 @@
     </header>
     <main>
         <section class="container">
-            <h1 class="container__title">Kontaktujte nás</h1>
+            <p class="container__title">Kontaktujte nás</p>
             <p class="container__paragraph">Zavolejte anebo nám napište... kvalitní komunikace je jeden z pilířů, na kterém stavíme.</p>
             <div class="contact__info">
                 <div class="contact__list">
@@ -43,13 +44,12 @@
                     <a href="https://mapy.cz/s/bogesucuto">Křižanská 12, Liberec XXII-Horní Suchá</a>
                 </div>
                 <div class="contact__map">
-                    <iframe style="border:none" src="https://frame.mapy.cz/s/nacufohuha" width="100%" height="100%"></iframe>
-                    <div class="contact__map-bcg">
-                </div>
+                    <iframe title="Kde sídlí HM Building" style="border:none" src="https://frame.mapy.cz/s/nacufohuha"></iframe>
+                    <div class="contact__map-bcg"></div>
                 </div>
             </div>
             <form class="contact__form">
-                <h2 class="container__title--2 --start">Nezávazná poptávka služeb</h2>
+                <p class="container__title --start">Nezávazná poptávka služeb</p>
                 <p class="container__paragraph --start">Plácneme se pro Váš projekt? Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
                     <label for="name">Jméno a příjmení</label>
                     <input type="text" id="name" name="name">
@@ -58,23 +58,22 @@
                     <label for="tel">Telefon</label>
                     <input type="tel" id="tel" name="tel">
                     <label for="sluzba">Poptávaná služba</label>
-                    <select name="sluzba">
+                    <select id="sluzba">
                         <option value="novostavba">Novostavba</option>
                         <option value="prumstavba">Průmyslová stavba</option>
                         <option value="rekonstrukce">Rekonstrukce domů a jiných staveb</option>
                         <option value="kominukace">Komunikace a zpevněné plochy</option>
-
                     </select>
                     <label for="poznamka">Poznámka</label>
-                    <textarea type="text" rows="10" id="poznamka" name="poznamka"></textarea>
+                    <textarea rows="10" id="poznamka" name="poznamka"></textarea>
                     <a class="btn--primary btn btn--form" href="#">Odeslat nezávaznou poptávku</a>
                 </form>
         </section>
     </main>
     <footer class="footer">
-        <h2 class="footer__heading">Plácneme si pro Váš projekt?</h2>
+        <p class="footer__heading">Plácneme si pro Váš projekt?</p>
         <p class="footer__text">Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
-        <a class="btn btn--light" href="contacts.html">Nezávazně poptat</a>
+        <a class="btn btn--light btn--center" href="contacts.html">Nezávazně poptat</a>
     </footer>
     <script defer src="assets/js/main.js"></script>
 </body>
